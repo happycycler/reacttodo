@@ -29,7 +29,7 @@ describe('TodoSearch', () => {
 		var $el = $(ReactDOM.findDOMNode(todoSearch));
 		
 		todoSearch.refs.showCompleted.checked = true;
-		TestUtils.Simulate.change(todoSearch.refs.searchText);
+		TestUtils.Simulate.change(todoSearch.refs.showCompleted);
 
 		expect(spy).toHaveBeenCalledWith(true, '');
 	});
