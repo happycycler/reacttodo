@@ -48,15 +48,28 @@ var TodoApp = React.createClass({
 		});
 	},
 	render: function () {
-		var { todos } = this.state;
+		var { todos, showCompleted, searchText } = this.state;
+		var filteredTodos = TodoAPI.filterTodos(todos, showCompleted, searchText);
 
 		return (
 			<div>
 				<div className="row">
 					<div className="column small-centered medium-8 large-6">
-						<TodoSearch onSearch={this.handleSearch} />
-						<TodoList todos={todos} onToggle={this.handleToggle} />,
-						<AddTodo onAddTodo={this.handleAddTodo} />
+						<div className="page-title">
+							<h1>Todo App</h1>
+						</div>
+
+						<div className="search-box">
+							<TodoSearch onSearch={this.handleSearch} />
+						</div>
+
+						<div className="todo-box">
+							<TodoList todos={filteredTodos} onToggle={this.handleToggle} className="search-box" />
+						</div>
+
+						<div className="add-box">
+							<AddTodo onAddTodo={this.handleAddTodo} className="search-box" />
+						</div>
 					</div>
 				</div>
 			</div>
