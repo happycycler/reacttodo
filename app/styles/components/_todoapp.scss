@@ -1,8 +1,9 @@
 body {
-	background-color: rgb(238, 235, 235);
-	background: rgb(238, 235, 235);
 	line-height: 1;
+	// background-color: lightgrey;
+	// background-image: url(../images/pin_background.png);
 }
+
 .page-title {
 	// font-weight: bold;
 	margin: 2rem 0;
@@ -10,19 +11,26 @@ body {
 }
 
 .search-box {
-	border: 2px solid rgb(206, 17, 17);
+	background-color: rgb(99, 96, 96);
 	padding: 1rem;
 	margin-bottom: 1rem;
+	box-shadow: 5px 5px rgb(37, 35, 35);
+	border-radius: 10px;
 }
 
 .todo-list-box {
-	border: 2px solid rgb(6, 26, 138);
+	background-color: rgb(99, 96, 96);
 	padding: 1rem;
 	margin-bottom: 1rem;
+	box-shadow: 5px 5px rgb(37, 35, 35);
+	border-radius: 10px;
 }
 
 .add-box {
-	border: 2px solid rgb(8, 139, 47);
+	// border: 2px solid rgb(8, 139, 47);
+	background-color: rgb(99, 96, 96);
 	padding: 1rem;
 	margin-bottom: 1rem;
+	box-shadow: 5px 5px rgb(37, 35, 35);
+	border-radius: 10px;
 }
